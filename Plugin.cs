@@ -1,6 +1,7 @@
 ﻿using BepInEx;
 using BepInEx.Logging;
 using HarmonyLib;
+
 using TutorialMod.Patches;
 
 namespace TutorialMod
@@ -14,9 +15,9 @@ namespace TutorialMod
 
         private readonly Harmony harmony = new Harmony(modGUID);
 
-        private static TutorialModBase Instance;
+        private static TutorialModBase? Instance;
 
-        internal ManualLogSource mls;
+        internal ManualLogSource? mls;
 
         void Awake()
         {
